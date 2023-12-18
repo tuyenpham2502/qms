@@ -26,15 +26,15 @@ export default function LaySoThuTu() {
             <BenhNhanUuTien count={count} handleClick={handleClick} />
           </div>
           <div className="laysothuong">
-            <BenhNhanThuong count2={count2} handleClick2={handleClick} />
+            <BenhNhanThuong count2={count2} handleClick2={handleClick2} />
           </div>
         </Col>
         <Col span={8}>
           <div className="sokhamuutien">
-            <HienThiUuTien  />
+            <HienThiUuTien count={count} />
           </div>
           <div className="sokhamuutien">
-            <HienThiThuong />
+            <HienThiThuong count2={count2} />
           </div>{" "}
         </Col>
       </Row>
