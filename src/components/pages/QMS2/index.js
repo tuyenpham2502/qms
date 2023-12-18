@@ -12,12 +12,6 @@ export default function QMS2() {
 
   const danhsach_benhnhan = [
     {
-      room: "pcc",
-      ten: "NGUYỄN MINH ĐỨC",
-      tuoi: "20 TUỔI",
-      stt: "001",
-    },
-    {
       room: "pxn",
       ten: "NGUYỄN MINH ĐỨC",
       tuoi: "20 TUỔI",
@@ -61,28 +55,42 @@ export default function QMS2() {
     },
   ];
 
+  const renderBenhNhan = (phongValue) => {
+    const danhSachBenhNhanTheoPhong = danhsach_benhnhan.filter(
+      (bn) => bn.room === phongValue
+    );
+
+    if (danhSachBenhNhanTheoPhong.length === 0) {
+      return <div>Không có bệnh nhân</div>;
+    }
+
+    return danhSachBenhNhanTheoPhong.map((benhNhan, index) => (
+      <div className="list_bndk">
+        <table className="list_bndk-content">
+          <th>BỆNH NHÂN ĐANG KHÁM</th>
+          <tbody>
+            <tr>
+              <td className="so_dangkham">{benhNhan.stt}</td>
+            </tr>
+            <tr>
+              <td className="benhnhan_dangkham">
+                {benhNhan.ten} - {benhNhan.tuoi}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ));
+  };
   return (
     <>
-      <Row>
-        <Col span={24}>
-          <HeaderQMS selectedItems={selectedItems} />
-        </Col>
-      </Row>
-      <Row>
-        <Col span={24}>
-          {danhsach_benhnhan.map((benhnhan) => (
-            <BenhNhanDangKham
-              ten={benhnhan.ten}
-              tuoi={benhnhan.tuoi}
-              stt={benhnhan.stt}
-            />
-          ))}
-        </Col>
-      </Row>
-      <Row>
-        <Col span={24}>
-          <BenhNhanChoKham />
-        </Col>
+      <Row gutter={[16, 16]}>
+        {selectedItems.map((phong) => (
+          <Col key={phong.value} span={6}>
+            <h3 style={{ background: "#00008b" }}>{phong.label}</h3>
+            {renderBenhNhan(phong.value)}
+          </Col>
+        ))}
       </Row>
     </>
   );

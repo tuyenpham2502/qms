@@ -97,7 +97,6 @@ export default function Config() {
                   mode="multiple"
                   style={{
                     width: "100%",
-                    height: "40px",
                   }}
                   placeholder=""
                   onChange={handleChange}
@@ -132,16 +131,17 @@ export default function Config() {
             </Row>
           </div>
           <div className="button">
-            <Button className="btn">
-              <Link
-                to={"qms2"}
-                state={{
-                  selectedItems: selectedItems,
-                }}
-              >
-                Xác nhận
-              </Link>
-            </Button>
+            <Link
+              to={"qms2"}
+              state={{
+                selectedItems: selectedItems,
+              }}
+            >
+              <Button className="btn">Xác nhận</Button>
+            </Link>
+            <Link to={"laysothutu"}>
+              <Button className="btn">Lay So</Button>
+            </Link>
           </div>
         </div>
       </div>
