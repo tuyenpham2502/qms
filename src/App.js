@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import { Routes, Route } from "react-router-dom";
+import Config from "./components/pages/Config";
+import QMS from "./components/pages/QMS";
+import QMS2 from "./components/pages/QMS2";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="main">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Config />} />
+          <Route path="qms" element={<QMS />} />
+          <Route path="qms2" element={<QMS2 />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 

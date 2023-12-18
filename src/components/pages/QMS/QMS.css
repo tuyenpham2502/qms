@@ -1,0 +1,38 @@
+.thong_tin {
+  margin: 0 5px;
+}
+
+.thong_tin .thong_tin-title {
+  background: #00008b;
+  color: #fff;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+table,
+thead {
+  border: 2px solid #00008b;
+}
+
+table {
+  border-collapse: collapse;
+  /* margin-top: 10px; */
+}
+
+th {
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #00008b;
+}
+
+td {
+  font-size: 18px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}

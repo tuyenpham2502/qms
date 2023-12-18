@@ -1,0 +1,88 @@
+.main__body {
+  background: #00008b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 87vh;
+}
+
+.container {
+  width: 90vw;
+  background-color: #fff;
+  margin: 2px 0;
+  border-radius: 20px;
+  height: 84vh;
+}
+
+.main__body-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__body-title h2 {
+  color: red;
+}
+
+.main__body-content {
+  margin: 20px 30px;
+}
+
+.mbc {
+  margin-bottom: 20px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.button .btn {
+  background: #00008b;
+  color: #fff;
+  height: 40px;
+  width: 160px;
+  font-weight: 600;
+}
+
+.button .btn:hover {
+  color: #00008b;
+  background-color: #fff;
+}
+
+.room {
+  margin: 0 20px;
+  background-color: #00008b;
+  color: #fff;
+  width: 24%;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.so_dangkham {
+  font-size: 80px;
+  color: red;
+  font-weight: 700;
+  text-align: center;
+}
+
+.benhnhan_dangkham {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.list_bndk {
+  display: flex;
+  margin: 10px 20px;
+}
+
+.list_bndk-content {
+  width: 22.8%;
+}
